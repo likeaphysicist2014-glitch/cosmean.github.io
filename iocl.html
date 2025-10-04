@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="COSMEAN: Learn, Analyse, Think, Publish, and Collaborate on physics and cosmology.">
+  <meta name="keywords" content="physics, cosmos, research, collaboration, science, education">
+  <meta name="author" content="COSMEAN Team">
+  <title>COSMEAN 🌌 - Explore Physics & Cosmos</title>
+  <!-- Favicon using a space emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>">
+
+  <!-- Combined CSS for dark, space-themed aesthetics -->
+  <style>
+    /* * COSMEAN Stylesheet (styles.css) - Embedded
+     * A dark, space-themed aesthetic for physics and cosmology.
+     */
+
+    /* --- Universal & Body Styling --- */
+    :root {
+      --primary-color: #4CAF50; /* A vibrant green for highlights */
+      --secondary-color: #1a73e8; /* A bright blue for links/buttons */
+      --text-color: #e0e0e0; /* Light grey for main text */
+      --background-color: #121212; /* Deep dark background */
+      --card-background: #1e1e1e; /* Slightly lighter dark for sections */
+      --footer-background: #0d0d0d; /* Even darker for footer */
+      --font-family: 'Inter', sans-serif; /* Using Inter for modern feel */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding-bottom: 50px; /* Space for the fixed-position footer */
+    }
+
+    /* --- Header & Navigation --- */
+    header {
+      background-color: var(--card-background);
+      color: #fff;
+      padding: 2rem 5%;
+      text-align: center;
+      border-bottom: 4px solid var(--primary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.25rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 5px rgba(76, 175, 80, 0.7); /* Subtle glow */
+    }
+
+    header p {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: #b0b0b0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin: 0.25rem 0.5rem; /* Added margin for mobile spacing */
+      transition: color 0.3s, background-color 0.3s;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+      background-color: rgba(76, 175, 80, 0.15); /* Subtle green highlight */
+    }
+
+    /* --- Section Styling --- */
+    section {
+      padding: 4rem 5%;
+      margin: 2rem auto;
+      max-width: 1100px;
+      background-color: var(--card-background);
+      border-radius: 12px; /* Rounded corners */
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 30px rgba(76, 175, 80, 0.2); /* Soft hover glow */
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      font-size: 2.2em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    section p {
+      margin-bottom: 1.5rem;
+      color: #c0c0c0;
+    }
+
+    /* --- Lists (UL) Styling --- */
+    section ul {
+      list-style-type: none; /* Remove default bullets */
+      padding-left: 0;
+      margin-bottom: 2rem;
+    }
+
+    section li {
+      padding: 0.5rem 0;
+      border-left: 4px solid var(--secondary-color);
+      padding-left: 1rem;
+      margin-bottom: 0.5rem;
+      background-color: rgba(26, 115, 232, 0.05); /* Subtle background for list items */
+      border-radius: 4px;
+    }
+
+    /* --- Buttons/Links --- */
+    .button {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s;
+      border: none;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+      min-width: 150px; /* Ensure a decent tap target size */
+      text-align: center;
+    }
+
+    .button:hover {
+      background-color: #1565c0; /* Darker blue on hover */
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: var(--footer-background);
+      color: #888;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* --- Media Queries for Responsiveness (Mobile First) --- */
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 70px; /* More space for potentially larger footer/nav */
+      }
+
+      header {
+        padding: 1.5rem 5%;
+        position: static; /* Less intrusive on small screens */
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        margin-bottom: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      nav a {
+        margin: 0.25rem 0;
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        padding: 0.75rem;
+        width: 100%;
+      }
+
+      section {
+        padding: 2rem 5%;
+        margin: 1rem auto;
+      }
+
+      section h2 {
+        font-size: 1.8em;
+      }
+      
+      .button {
+          width: 100%; /* Full width buttons on mobile */
+          padding: 15px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>COSMEAN 🌌</h1>
+    <p>Discover, Research, Collaborate — What Does Our Cosmos Mean?</p>
+    <nav>
+      <!-- Ensure links are smooth scrollable on modern browsers -->
+      <a href="#learn">Learn</a>
+      <a href="#analyse">Analyse</a>
+      <a href="#think">Think</a>
+      <a href="#publish">Publish</a>
+      <a href="#collaborate">Collaborate</a>
+    </nav>
+  </header>
+
+  <section id="learn">
+    <h2>Learn</h2>
+    <p>Explore the wonders of physics and cosmology through accessible tutorials, historical discoveries, and clear explanations of complex concepts.</p>
+    <ul>
+      <li>Understand key physics principles</li>
+      <li>Discover the history of cosmic exploration</li>
+      <li>Access beginner-friendly resources</li>
+    </ul>
+    <a href="https://www.khanacademy.org/science/physics" target="_blank" class="button">Start Learning</a>
+  </section>
+
+  <section id="analyse">
+    <h2>Analyse</h2>
+    <p>Dive into data-driven insights, research summaries, and tools to analyze experiments in physics and cosmology.</p>
+    <ul>
+      <li>Review cutting-edge research papers</li>
+      <li>Use tools for data analysis</li>
+      <li>Explore experimental results</li>
+    </ul>
+    <a href="https://arxiv.org/" target="_blank" class="button">Explore Analysis</a>
+  </section>
+
+  <section id="think">
+    <h2>Think</h2>
+    <p>Engage in thought experiments, debate open questions, and ponder the mysteries of the universe.</p>
+    <ul>
+      <li>Discuss unsolved problems in physics</li>
+      <li>Share creative ideas and hypotheses</li>
+      <li>Participate in philosophical debates</li>
+    </ul>
+    <a href="https://www.reddit.com/r/Physics/" target="_blank" class="button">Join the Discussion</a>
+  </section>
+
+  <section id="publish">
+    <h2>Publish</h2>
+    <p>Share your research, experiments, or findings with the global COSMEAN community.</p>
+    <ul>
+      <li>Submit summaries of your work</li>
+      <li>Publish open-access papers</li>
+      <li>Get feedback from peers</li>
+    </ul>
+    <!-- This link is currently a placeholder, as the feature isn't defined yet -->
+    <a href="#contact" class="button">Share Your Work</a>
+  </section>
+
+  <section id="collaborate">
+    <h2>Collaborate</h2>
+    <p>Connect with physicists, students, and enthusiasts worldwide to network, share ideas, and work together.</p>
+    <ul>
+      <li>Join global research projects</li>
+      <li>Participate in community forums</li>
+      <li>Build networks for collaboration</li>
+    </ul>
+    <a href="https://discord.com/" target="_blank" class="button">Join the Community</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 COSMEAN. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
